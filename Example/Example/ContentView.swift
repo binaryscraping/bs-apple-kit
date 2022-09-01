@@ -38,12 +38,16 @@ struct Destination: Hashable, Identifiable {
 }
 
 struct ContentView: View {
+  @State var destination: Destination?
+
   var body: some View {
-    NavigationStack {
-      List(Destination.all) { destination in
+    NavigationSplitView {
+      List(Destination.all, selection: $destination) { destination in
         NavigationLink(destination.name, value: destination)
       }
-      .navigationDestination(for: Destination.self) { destination in
+      .navigationTitle("Examples")
+    } detail: {
+      if let destination {
         destination.content
           .navigationTitle(destination.name)
       }

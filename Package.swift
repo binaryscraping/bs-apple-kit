@@ -12,11 +12,13 @@ let package = Package(
     .watchOS(.v9),
   ],
   products: [
+    .library(name: "ConcurrencyHelpers", targets: ["ConcurrencyHelpers"]),
     .library(name: "Prelude", targets: ["Prelude"]),
     .library(name: "SwiftUIHelpers", targets: ["SwiftUIHelpers"]),
   ],
   dependencies: [],
   targets: [
+    .target(name: "ConcurrencyHelpers"),
     .target(name: "Prelude", dependencies: []),
     .testTarget(name: "PreludeTests", dependencies: ["Prelude"]),
     .target(name: "SwiftUIHelpers"),
