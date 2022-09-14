@@ -5,8 +5,8 @@
 //  Created by Guilherme Souza on 26/08/22.
 //
 
-import SwiftUIHelpers
 import SwiftUI
+import SwiftUIHelpers
 
 struct Destination: Hashable, Identifiable {
   var id: String { name }
@@ -33,7 +33,7 @@ struct Destination: Hashable, Identifiable {
           }
         )
       )
-    )
+    ),
   ]
 }
 

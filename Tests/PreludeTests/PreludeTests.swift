@@ -1,5 +1,5 @@
-import XCTest
 @testable import Prelude
+import XCTest
 
 final class TypesTests: XCTestCase {
   func testUnitEquality() {

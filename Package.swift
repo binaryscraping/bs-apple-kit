@@ -24,5 +24,6 @@ let package = Package(
     .testTarget(name: "PreludeTests", dependencies: ["Prelude"]),
     .target(name: "SwiftUIHelpers"),
     .target(name: "UIKitHelpers"),
+    .testTarget(name: "UIKitHelpersTests", dependencies: ["UIKitHelpers"]),
   ]
 )
