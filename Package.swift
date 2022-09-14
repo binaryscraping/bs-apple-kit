@@ -15,6 +15,7 @@ let package = Package(
     .library(name: "ConcurrencyHelpers", targets: ["ConcurrencyHelpers"]),
     .library(name: "Prelude", targets: ["Prelude"]),
     .library(name: "SwiftUIHelpers", targets: ["SwiftUIHelpers"]),
+    .library(name: "UIKitHelpers", targets: ["UIKitHelpers"]),
   ],
   dependencies: [],
   targets: [
@@ -22,5 +23,6 @@ let package = Package(
     .target(name: "Prelude", dependencies: []),
     .testTarget(name: "PreludeTests", dependencies: ["Prelude"]),
     .target(name: "SwiftUIHelpers"),
+    .target(name: "UIKitHelpers"),
   ]
 )
