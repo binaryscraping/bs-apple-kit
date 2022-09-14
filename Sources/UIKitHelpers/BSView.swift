@@ -35,15 +35,8 @@
       super.configure()
 
       let view = View()
-      view.translatesAutoresizingMaskIntoConstraints = false
       contentView.addSubview(view)
-
-      NSLayoutConstraint.activate([
-        view.topAnchor.constraint(equalTo: contentView.topAnchor),
-        view.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-        view.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
-        view.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-      ])
+      view.edgesToSuperview()
     }
   }
 #endif

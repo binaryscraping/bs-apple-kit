@@ -19,9 +19,10 @@
       fileID: StaticString = #fileID,
       line: UInt = #line
     ) -> C {
-      guard
-        let cell = dequeueReusableCell(withReuseIdentifier: cellType.reuseIdentifier, for: indexPath) as? C
-      else {
+      guard let cell = dequeueReusableCell(
+        withReuseIdentifier: cellType.reuseIdentifier,
+        for: indexPath
+      ) as? C else {
         fatalError(
           """
           Fail to dequeue reusable cell with identifier: '\(cellType.reuseIdentifier)'.
