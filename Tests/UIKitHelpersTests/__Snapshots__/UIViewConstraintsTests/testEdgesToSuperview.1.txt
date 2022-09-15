@@ -1,0 +1,5 @@
+▿ 4 elements
+  - <NSLayoutConstraint V:|-(0)-[UIView]   (active, names: '|':UIView )>
+  - <NSLayoutConstraint UIView.trailing == UIView.trailing   (active)>
+  - <NSLayoutConstraint UIView.bottom == UIView.bottom   (active)>
+  - <NSLayoutConstraint H:|-(0)-[UIView]   (active, names: '|':UIView )>

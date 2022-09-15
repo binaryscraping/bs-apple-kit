@@ -17,13 +17,21 @@ let package = Package(
     .library(name: "SwiftUIHelpers", targets: ["SwiftUIHelpers"]),
     .library(name: "UIKitHelpers", targets: ["UIKitHelpers"]),
   ],
-  dependencies: [],
+  dependencies: [
+    .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.9.0"),
+  ],
   targets: [
     .target(name: "ConcurrencyHelpers"),
     .target(name: "Prelude", dependencies: []),
     .testTarget(name: "PreludeTests", dependencies: ["Prelude"]),
     .target(name: "SwiftUIHelpers"),
     .target(name: "UIKitHelpers"),
-    .testTarget(name: "UIKitHelpersTests", dependencies: ["UIKitHelpers"]),
+    .testTarget(
+      name: "UIKitHelpersTests",
+      dependencies: [
+        "UIKitHelpers",
+        .product(name: "SnapshotTesting", package: "swift-snapshot-testing"),
+      ]
+    ),
   ]
 )
