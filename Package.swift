@@ -5,11 +5,9 @@ import PackageDescription
 let package = Package(
   name: "bs-apple-kit",
   platforms: [
-    .iOS(.v16),
-    .macOS(.v13),
-    .macCatalyst(.v15),
-    .tvOS(.v14),
-    .watchOS(.v9),
+    .iOS(.v14),
+    .macOS(.v11),
+    .macCatalyst(.v13),
   ],
   products: [
     .library(name: "ConcurrencyHelpers", targets: ["ConcurrencyHelpers"]),
@@ -22,8 +20,14 @@ let package = Package(
   ],
   targets: [
     .target(name: "ConcurrencyHelpers"),
-    .target(name: "Prelude", dependencies: []),
-    .testTarget(name: "PreludeTests", dependencies: ["Prelude"]),
+    .target(
+      name: "Prelude",
+      dependencies: []
+    ),
+    .testTarget(
+      name: "PreludeTests",
+      dependencies: ["Prelude"]
+    ),
     .target(name: "SwiftUIHelpers"),
     .target(name: "UIKitHelpers"),
     .testTarget(
