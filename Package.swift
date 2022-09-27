@@ -20,6 +20,7 @@ let package = Package(
   ],
   targets: [
     .target(name: "ConcurrencyHelpers"),
+    .testTarget(name: "ConcurrencyHelpersTests", dependencies: ["ConcurrencyHelpers"]),
     .target(
       name: "Prelude",
       dependencies: []
