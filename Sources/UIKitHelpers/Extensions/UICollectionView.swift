@@ -9,7 +9,7 @@
   }
 
   extension UICollectionView {
-    public func register<C: UICollectionViewCell>(_ cellType: C.Type) {
+    public func register(_ cellType: (some UICollectionViewCell).Type) {
       register(cellType, forCellWithReuseIdentifier: cellType.reuseIdentifier)
     }
 

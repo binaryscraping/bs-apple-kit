@@ -14,5 +14,12 @@
       removeFromParent()
       view.removeFromSuperview()
     }
+
+    public func embeddedInNavigationController(
+      _ navigationController: UINavigationController = UINavigationController()
+    ) -> UINavigationController {
+      navigationController.setViewControllers([self], animated: false)
+      return navigationController
+    }
   }
 #endif

@@ -21,15 +21,15 @@
   /// navigationController.push(viewController, animated: true)
   /// ```
   open class BSContentViewController<Content: UIView>: BSViewController {
-    let content: Content
+    let content: () -> Content
 
-    public init(content: Content) {
+    public init(content: @escaping () -> Content) {
       self.content = content
       super.init()
     }
 
     override open func loadView() {
-      view = content
+      view = content()
     }
   }
 #endif

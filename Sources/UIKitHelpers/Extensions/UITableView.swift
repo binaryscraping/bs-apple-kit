@@ -9,7 +9,7 @@
   }
 
   extension UITableView {
-    public func register<C: UITableViewCell>(_ cellType: C.Type) {
+    public func register(_ cellType: (some UITableViewCell).Type) {
       register(cellType, forCellReuseIdentifier: cellType.reuseIdentifier)
     }
 

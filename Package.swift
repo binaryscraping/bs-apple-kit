@@ -17,10 +17,15 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.9.0"),
+    .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", from: "0.3.3"),
   ],
   targets: [
-    .target(name: "ConcurrencyHelpers"),
-    .testTarget(name: "ConcurrencyHelpersTests", dependencies: ["ConcurrencyHelpers"]),
+    .target(
+      name: "ConcurrencyHelpers",
+      dependencies: [
+        .product(name: "ConcurrencyPlus", package: "ConcurrencyPlus"),
+      ]
+    ),
     .target(
       name: "Prelude",
       dependencies: []
