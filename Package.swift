@@ -30,6 +30,7 @@ let package = Package(
       dependencies: ["Prelude"]
     ),
     .target(name: "SwiftUIHelpers"),
+    .target(name: "TestHelpers"),
     .target(name: "UIKitHelpers"),
     .testTarget(
       name: "UIKitHelpersTests",
