@@ -90,5 +90,21 @@
       constraint.isActive = true
       return constraint
     }
+
+    @discardableResult
+    public func width(_ constant: CGFloat) -> NSLayoutConstraint {
+      translatesAutoresizingMaskIntoConstraints = false
+      let constraint = widthAnchor.constraint(equalToConstant: constant)
+      constraint.isActive = true
+      return constraint
+    }
+
+    @discardableResult
+    public func height(_ constant: CGFloat) -> NSLayoutConstraint {
+      translatesAutoresizingMaskIntoConstraints = false
+      let constraint = heightAnchor.constraint(equalToConstant: constant)
+      constraint.isActive = true
+      return constraint
+    }
   }
 #endif
