@@ -59,5 +59,27 @@
       let constraints = view1.constraints as NSArray
       assertSnapshot(matching: constraints, as: .dump)
     }
+
+    func testCenterXInSuperview() {
+      let view1 = UIView()
+      let view2 = UIView()
+
+      view1.addSubview(view2)
+      view2.centerXInSuperview(offset: 10)
+
+      let constraints = view1.constraints as NSArray
+      assertSnapshot(matching: constraints, as: .dump)
+    }
+
+    func testCenterYInSuperview() {
+      let view1 = UIView()
+      let view2 = UIView()
+
+      view1.addSubview(view2)
+      view2.centerYInSuperview(offset: 10)
+
+      let constraints = view1.constraints as NSArray
+      assertSnapshot(matching: constraints, as: .dump)
+    }
   }
 #endif
