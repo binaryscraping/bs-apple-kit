@@ -5,7 +5,7 @@
   final class BSViewControllerTests: XCTestCase {
     func testBSContentViewController() {
       let customView = UIView()
-      let sut = BSContentViewController(content: customView)
+      let sut = BSContentViewController { customView }
       sut.loadViewIfNeeded()
       XCTAssertIdentical(sut.view, customView)
     }
