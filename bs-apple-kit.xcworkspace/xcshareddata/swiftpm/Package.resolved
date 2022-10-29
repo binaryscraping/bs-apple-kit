@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "concurrencyplus",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/ChimeHQ/ConcurrencyPlus",
+      "state" : {
+        "revision" : "d603e3f8be17e71d93ec650fb31674b928b26e22",
+        "version" : "0.3.3"
+      }
+    },
+    {
+      "identity" : "swift-snapshot-testing",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-snapshot-testing",
+      "state" : {
+        "revision" : "f29e2014f6230cf7d5138fc899da51c7f513d467",
+        "version" : "1.10.0"
+      }
+    }
+  ],
+  "version" : 2
+}
