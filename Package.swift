@@ -6,7 +6,7 @@ let package = Package(
   name: "bs-apple-kit",
   platforms: [
     .iOS(.v14),
-    .macOS(.v11),
+    .macOS(.v12),
     .macCatalyst(.v13),
   ],
   products: [
