@@ -10,12 +10,30 @@
       }
     },
     {
+      "identity" : "swift-custom-dump",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-custom-dump",
+      "state" : {
+        "revision" : "819d9d370cd721c9d87671e29d947279292e4541",
+        "version" : "0.6.0"
+      }
+    },
+    {
       "identity" : "swift-snapshot-testing",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pointfreeco/swift-snapshot-testing",
       "state" : {
         "revision" : "f29e2014f6230cf7d5138fc899da51c7f513d467",
         "version" : "1.10.0"
+      }
+    },
+    {
+      "identity" : "xctest-dynamic-overlay",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/xctest-dynamic-overlay",
+      "state" : {
+        "revision" : "16e6409ee82e1b81390bdffbf217b9c08ab32784",
+        "version" : "0.5.0"
       }
     }
   ],

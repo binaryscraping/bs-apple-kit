@@ -60,7 +60,7 @@ private protocol ObservableObjectProxy {
 }
 
 private struct Proxy<Base> {
-  func extract<A, B, C>(_ instance: A, _ extract: (Base) -> B) -> C {
+  func extract<C>(_ instance: some Any, _ extract: (Base) -> some Any) -> C {
     extract(instance as! Base) as! C
   }
 }
@@ -68,7 +68,7 @@ private struct Proxy<Base> {
 extension Proxy: ObservableObjectProxy where Base: ObservableObject,
   Base.ObjectWillChangePublisher == ObservableObjectPublisher
 {
-  func extractObjectWillChange<T>(_ instance: T) -> ObservableObjectPublisher {
+  func extractObjectWillChange(_ instance: some Any) -> ObservableObjectPublisher {
     extract(instance) { $0.objectWillChange }
   }
 }

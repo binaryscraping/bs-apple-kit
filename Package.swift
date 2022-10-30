@@ -11,12 +11,14 @@ let package = Package(
   ],
   products: [
     .library(name: "ConcurrencyHelpers", targets: ["ConcurrencyHelpers"]),
+    .library(name: "DebuggingHelpers", targets: ["DebuggingHelpers"]),
     .library(name: "Prelude", targets: ["Prelude"]),
     .library(name: "SwiftUIHelpers", targets: ["SwiftUIHelpers"]),
     .library(name: "UIKitHelpers", targets: ["UIKitHelpers"]),
   ],
   dependencies: [
     .package(url: "https://github.com/pointfreeco/swift-snapshot-testing", from: "1.9.0"),
+    .package(url: "https://github.com/pointfreeco/swift-custom-dump", from: "0.6.0"),
     .package(url: "https://github.com/ChimeHQ/ConcurrencyPlus", from: "0.3.3"),
   ],
   targets: [
@@ -26,6 +28,7 @@ let package = Package(
         .product(name: "ConcurrencyPlus", package: "ConcurrencyPlus"),
       ]
     ),
+    .target(name: "DebuggingHelpers", dependencies: [.product(name: "CustomDump", package: "swift-custom-dump")]),
     .target(
       name: "Prelude",
       dependencies: []

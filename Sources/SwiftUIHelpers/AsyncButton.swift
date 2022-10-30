@@ -38,7 +38,7 @@ public struct AsyncButton<Label: View>: View {
 }
 
 extension AsyncButton<Text> {
-  public init<S: StringProtocol>(_ title: S, action: @escaping () async -> Void) {
+  public init(_ title: some StringProtocol, action: @escaping () async -> Void) {
     self.init(action: action, label: { Text(title) })
   }
 
