@@ -38,7 +38,9 @@ extension Logger {
       messageComponents.append("[\(name)]")
     }
 
-    messageComponents.append("\(file).\(function):\(line)")
+    let fileWithoutExtension = "\(file)".split(separator: ".").first ?? ""
+
+    messageComponents.append("\(fileWithoutExtension).\(function):\(line)")
     let message = messageComponents.joined(separator: " ")
 
     trace("Start: \(message)")
@@ -72,7 +74,9 @@ extension Logger {
       messageComponents.append("[\(name)]")
     }
 
-    messageComponents.append("\(file).\(function):\(line)")
+    let fileWithoutExtension = "\(file)".split(separator: ".").first ?? ""
+
+    messageComponents.append("\(fileWithoutExtension).\(function):\(line)")
     let message = messageComponents.joined(separator: " ")
 
     trace("Start: \(message)")
